@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'sb-terms-and-policy',
+  selector: 'sb-services-page.service.ts',
   standalone: true,
   imports: [],
   templateUrl: './terms-and-policy.component.html',
