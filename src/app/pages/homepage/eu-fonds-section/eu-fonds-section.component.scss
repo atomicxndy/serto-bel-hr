@@ -1,0 +1,12 @@
+@import "src/assets/styles/colors";
+@import "src/assets/styles/grid";
+@import 'bootstrap/scss/mixins';
+
+.eu-fonds-image {
+  img {
+    @include media-breakpoint-down(md) {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+// see /bootstrap/scss/variables.scss
+
+// Grid columns
+$grid-columns: 12;
+// I strongly suggest to reduce gutter-width (at least for mobile)
+// see RBMC project. Drawback: a lot of overrides
+$grid-gutter-width: 30px;
+$grid-gutter-banner-width: 0;
+//$grid-gutter-width-md: 16px;
+//$grid-gutter-width-sm: 12px;
+
+// Grid breakpoints
+$grid-breakpoints: (
+        xs: 0,
+        sm: 360px,
+        md: 576px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px,
+        xxxl: 1700px,
+);
+
+// Grid containers
+// now max-width on sm/md to make is full responsive
+$container-max-widths: (
+  //sm: 375px,
+  //md: 540px,
+        lg: 960px + $grid-gutter-width,
+        xl: 1140px + $grid-gutter-width,
+        xxl: 1320px + $grid-gutter-width,
+        xxxl: 1600px + $grid-gutter-width
+);

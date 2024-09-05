@@ -1,0 +1,18 @@
+@import "src/assets/styles/grid";
+@import 'bootstrap/scss/mixins';
+
+.sb-homepage {
+  &__basic-info-section {
+    margin-top: -100px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__basic-about-section {
+    margin-bottom: 150px;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 200px;
+    }
+  }
+}

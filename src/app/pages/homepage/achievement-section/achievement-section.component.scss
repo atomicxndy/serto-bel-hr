@@ -1,0 +1,38 @@
+@import "src/assets/styles/colors";
+@import "src/assets/styles/grid";
+@import 'bootstrap/scss/mixins';
+
+.sb-basic-info-section {
+  padding: 50px;
+  background: $sb-dark-blue;
+
+  @include media-breakpoint-down(md) {
+    margin: 0;
+  }
+
+  &--logo {
+    font-weight: bold;
+    color: $sb-white;
+    display: flex;
+    align-items: center;
+  }
+
+  &--block {
+    .numbers {
+      color: $sb-white;
+      font-size: 32px;
+      font-weight: lighter;
+      border-bottom: 3px solid $sb-white;
+    }
+
+    .label {
+      text-transform: uppercase;
+      color: $sb-white;
+      font-size: 12px;
+      letter-spacing: 1px;
+      font-weight: 200;
+      margin-top: 20px;
+    }
+  }
+}
+

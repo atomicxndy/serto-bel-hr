@@ -1,0 +1,24 @@
+<section class="wrapper">
+    <div class="container py-14 py-md-16 sb-basic-services">
+        <div class="row d-flex align-items-start gy-10">
+            <div class="col-lg-5 position-lg-sticky" style="top: 8rem;">
+                <h3 class="display-2 sb-basic-services__title mb-5 animate__animated animate__fadeInUp">{{ data.data.attributes.servicesSectionTitle }}</h3>
+                <p class="mb-7">{{ data.data.attributes.aboutSectionDescription }}</p>
+                <a routerLink="/services" class="btn btn-lg sb-btn btn-icon btn-icon-end">{{ data.data.attributes.servicesSectionBtnLabel }} <i class="uil uil-arrow-up-right"></i></a>
+            </div>
+            <div class="col-lg-6 ms-auto">
+
+                @for (service of data.data.attributes.servicesSectionList; track service) {
+                    <div class="card mb-6 sb-basic-services__card">
+                        <div class="card-body sb-basic-services__card-body d-flex flex-row">
+                            <div>
+                                <h3 class="fs-21 mb-2 title">{{ service.serviceTitle }}</h3>
+                                <p class="mb-0 description">{{ service.serviceDescription }}</p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>

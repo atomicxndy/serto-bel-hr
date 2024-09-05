@@ -1,0 +1,37 @@
+@import "src/assets/styles/colors";
+@import "src/assets/styles/grid";
+@import 'bootstrap/scss/mixins';
+
+.sb-basic-about-section {
+  padding: 50px 0;
+
+  @include media-breakpoint-down(md) {
+    padding: 25px 0;
+  }
+  &__title {
+    text-align: center;
+    color: $sb-dark;
+    h1 {
+      font-weight: 200;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 30px;
+
+    p {
+      text-align: center;
+      font-weight: 200;
+      color: $sb-dark;
+    }
+  }
+
+  &__paragraph-large {
+    margin-top: 50px;
+
+    p {
+      font-weight: 200;
+      color: $sb-dark;
+    }
+  }
+}

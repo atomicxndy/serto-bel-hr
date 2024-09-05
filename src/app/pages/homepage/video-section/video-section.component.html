@@ -1,0 +1,23 @@
+<section class="video-wrapper bg-overlay bg-overlay-gradient px-0 min-vh-80">
+    <video autoplay loop playsinline muted>
+        <source src="{{ video }}" type="{{ videoType }}">
+    </video>
+    <div class="video-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 sb-view-all-services-cta">
+                    <a routerLink="/services">
+                        <svg viewBox="0 0 32 32" class="icon icon-arrow-left">
+                            <path d="M12.586 27.414l-10-10c-0.781-0.781-0.781-2.047 0-2.828l10-10c0.781-0.781 2.047-0.781 2.828 0s0.781 2.047 0 2.828l-6.586 6.586h19.172c1.105 0 2 0.895 2 2s-0.895 2-2 2h-19.172l6.586 6.586c0.39 0.39 0.586 0.902 0.586 1.414s-0.195 1.024-0.586 1.414c-0.781 0.781-2.047 0.781-2.828 0z"></path>
+                        </svg>
+                        <span>{{ homepageData.data.attributes.videoBackgroundServicesCta }}</span>
+                    </a>
+                </div>
+                <div class="col-lg-12 col-sm-12 sb-heading">
+                    <img class="video-background-image" src="{{ resolvedImgUrl }}">
+                </div>
+                <div class="col-lg-12 col-sm-12 sb-subheading">{{ homepageData.data.attributes.videoBackgroundSubtitle }}</div>
+            </div>
+        </div>
+    </div>
+</section>
