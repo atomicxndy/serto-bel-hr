@@ -1,1 +1,61 @@
-<p>careers works!</p>
+@if (data$ | async; as career) {
+    <sb-header
+            [title]="career.data.attributes.headerTitle!"
+    ></sb-header>
+    <section class="wrapper bg-light">
+        <div class="container py-14 py-md-16">
+            <div class="row text-center">
+                <div class="col-xl-10 mx-auto">
+                    <h2 class="fs-15 text-uppercase text-muted mb-3">
+                        {{ career.data.attributes.label }}
+                    </h2>
+                    <h3 class="display-4 mb-10 px-xxl-15">
+                        {{ career.data.attributes.title }}
+                    </h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-10 mx-auto">
+                    <div class="job-list mb-10">
+                        @for (
+                                job of career.data.attributes.jobOpeningsComponent;
+                            track job
+                                ) {
+                            <div class="col-12 mb-2">
+                                <div ngbAccordion #accordion="ngbAccordion">
+                                    <div ngbAccordionItem>
+                                        <h2 ngbAccordionHeader>
+                                            <button ngbAccordionButton>
+                                                <div class="row job-accordion-header">
+                                                    <span class="col-8">{{ job.jobTitle }}</span>
+                                                    <span class="col-4">
+                            <i class="uil uil-location-arrow me-1"></i
+                            >{{ job.jobLocation }}
+                          </span>
+                                                    <span
+                                                            class="d-none d-lg-block col-1 text-center text-body"
+                                                    >
+                          </span>
+                                                </div>
+                                            </button>
+                                        </h2>
+                                        <div ngbAccordionCollapse>
+                                            <div ngbAccordionBody>
+                                                <ng-template>
+                                                    <div
+                                                            class="description"
+                                                            [innerHTML]="job.jobDescription"
+                                                    ></div>
+                                                </ng-template>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}

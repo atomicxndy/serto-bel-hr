@@ -1,0 +1,19 @@
+@if (data$ | async; as data) {
+    <sb-header [title]="data.data?.attributes?.headerTitle!"></sb-header>
+    <div class="row d-flex justify-content-center">
+        <div class="col-11">
+            <section class="wrapper pt-16 sb-terms-section">
+                <div class="card sb-terms-section__card">
+                    <div class="card-body sb-terms-section__card-body p-10">
+                        <h2 class=" text-center sb-terms-section__card-body--title">{{ data.data?.attributes?.title }}</h2>
+                        <p class="sb-terms-section__card-body--description">{{ data.data?.attributes?.content }}</p>
+                        <div class="sb-terms-section__card-body--buttons">
+                            <button class="btn btn-lg sb-btn btn-icon btn-icon-end iso9001" (click)="downloadISO9001File()">{{ data.data?.attributes?.iso9001Label }}</button>
+                            <button class="btn btn-lg sb-btn btn-icon btn-icon-end btn-download iso14001" (click)="downloadISO14001File()">{{ data.data?.attributes?.iso14001Label }}</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+}

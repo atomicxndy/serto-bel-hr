@@ -1,1 +1,15 @@
-<p>eu-fonds works!</p>
+@if (data$ | async; as euFondsPageData) {
+    <sb-header [title]="euFondsPageData?.data?.attributes?.headerTitle!"></sb-header>
+    <div class="row d-flex justify-content-center">
+        <div class="col-11">
+            <section class="wrapper pt-16 sb-gdpr-section">
+                <div class="card sb-gdpr-section__card">
+                    <div class="card-body sb-gdpr-section__card-body p-10">
+                        <h2 class=" text-center sb-gdpr-section__card-body--title">{{ euFondsPageData?.data?.attributes?.title }}</h2>
+                        <div class="description" [innerHTML]="euFondsPageData?.data?.attributes?.content"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+}

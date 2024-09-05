@@ -1,1 +1,28 @@
-<p>faq works!</p>
+@if (data$ | async; as faq) {
+    <sb-header [title]="faq.data.attributes.headerTitle!"></sb-header>
+    <section class="wrapper bg-light">
+        <div class="container py-14 py-md-16">
+            <div class="row">
+
+                @for (question of faq.data.attributes.faqQuestionComponent; track question) {
+                    <div class="col-12 mb-2">
+                        <div ngbAccordion #accordion="ngbAccordion">
+                            <div ngbAccordionItem="{{ question.id }}">
+                                <h2 ngbAccordionHeader>
+                                    <button ngbAccordionButton>{{ question.questionTitle }}</button>
+                                </h2>
+                                <div ngbAccordionCollapse>
+                                    <div ngbAccordionBody>
+                                        <ng-template>
+                                            <div class="description" [innerHTML]="question?.description! | bypassSecurity"></div>
+                                        </ng-template>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+}

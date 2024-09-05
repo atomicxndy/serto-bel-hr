@@ -1,1 +1,6 @@
-<p>about works!</p>
+@if (aboutUsData$ | async; as aboutUsData) {
+    <sb-video-header [data]="aboutUsData"></sb-video-header>
+    <sb-content [data]="aboutUsData"></sb-content>
+    <!-- about us cta -->
+    <sb-cta [data]="aboutUsData"></sb-cta>
+}
