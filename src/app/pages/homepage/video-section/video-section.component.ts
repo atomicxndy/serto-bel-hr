@@ -1,10 +1,13 @@
 import {Component, Input} from '@angular/core';
 import {HomepageData} from "../../../shared/constants/homepage";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'sb-video-section',
   standalone: true,
-  imports: [],
+    imports: [
+        RouterLink
+    ],
   templateUrl: './video-section.component.html',
   styleUrl: './video-section.component.scss'
 })

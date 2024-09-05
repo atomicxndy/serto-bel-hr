@@ -5,7 +5,7 @@
                 <h2 class="fs-15 text-uppercase text-primary mb-3">FAQ</h2>
                 <h3 class="display-5 mb-4">{{ data.data.attributes.faqSectionTitle }}</h3>
                 <p class="lead mb-6">{{ data.data.attributes.faqSectionDescription }}</p>
-                <a href="#" class="btn btn-lg sb-btn btn-icon btn-icon-end">{{ data.data.attributes.faqSectionBtnLabel }} <i class="uil uil-arrow-up-right"></i></a>
+                <a routerLink="/faq" class="btn btn-lg sb-btn btn-icon btn-icon-end">{{ data.data.attributes.faqSectionBtnLabel }} <i class="uil uil-arrow-up-right"></i></a>
             </div>
             <div class="col-lg-6 col-sm-12 mb-2">
                 @for (question of data.data.attributes.faqSectionList; track  question.id;) {

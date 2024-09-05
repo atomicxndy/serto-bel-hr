@@ -7,6 +7,11 @@
 }
 
 .video-wrapper {
+  min-height: 80vh !important;
+  @include media-breakpoint-down(sm) {
+    min-height: 60vh !important;
+  }
+
   video {
     -o-object-fit: cover;
     object-fit: cover;
@@ -34,7 +39,7 @@
 
     .sb-view-all-services-cta {
       margin-bottom: 20px;
-      font-family: Montserrat;
+      font-family: Montserrat, sans-serif;
       font-size: 14px;
 
       a {

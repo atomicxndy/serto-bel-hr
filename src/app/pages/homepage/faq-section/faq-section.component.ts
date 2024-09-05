@@ -7,6 +7,7 @@ import {
   NgbAccordionHeader,
   NgbAccordionItem
 } from "@ng-bootstrap/ng-bootstrap";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'sb-faq-section',
@@ -17,7 +18,8 @@ import {
     NgbAccordionHeader,
     NgbAccordionButton,
     NgbAccordionCollapse,
-    NgbAccordionBody
+    NgbAccordionBody,
+    RouterLink
   ],
   templateUrl: './faq-section.component.html',
   styleUrl: './faq-section.component.scss'

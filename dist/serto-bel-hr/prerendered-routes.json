@@ -1,0 +1,21 @@
+{
+  "routes": [
+    "/",
+    "/about-us",
+    "/bending-of-sheets",
+    "/blm",
+    "/blm-software",
+    "/bystronic",
+    "/careers",
+    "/contact-us",
+    "/eu-fonds",
+    "/faq",
+    "/gallery",
+    "/gdpr",
+    "/laser-cutting-of-pipes",
+    "/laser-cutting-of-sheets",
+    "/prima",
+    "/services",
+    "/terms-and-privacy"
+  ]
+}

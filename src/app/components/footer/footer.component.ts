@@ -5,13 +5,15 @@ import {HttpClient} from "@angular/common/http";
 import {EndpointBuilderService} from "../../shared/services/endpoint-builder.service";
 import {commonPagesEndpoints} from "../../shared/endpoints/endpoints";
 import {AsyncPipe} from "@angular/common";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'sb-footer',
   standalone: true,
-  imports: [
-    AsyncPipe
-  ],
+    imports: [
+        AsyncPipe,
+        RouterLink
+    ],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
