@@ -1,0 +1,20 @@
+.sb-terms-section {
+  margin-bottom: 100px;
+  &__card {
+    &-body {
+      &--title {
+        margin-bottom: 50px;
+      }
+      &--description {
+        white-space: pre-line !important;
+      }
+      &--buttons {
+        margin-top: 30px;
+        font-weight: bold;
+        .iso9001 {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}

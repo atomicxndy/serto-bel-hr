@@ -1,13 +1,23 @@
 import {Component, Input} from '@angular/core';
 import {HomepageData} from "../../../shared/constants/homepage";
-import {NgbAccordionDirective, NgbAccordionItem} from "@ng-bootstrap/ng-bootstrap";
+import {
+  NgbAccordionBody,
+  NgbAccordionButton, NgbAccordionCollapse,
+  NgbAccordionDirective,
+  NgbAccordionHeader,
+  NgbAccordionItem
+} from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: 'sb-faq-section',
   standalone: true,
   imports: [
     NgbAccordionDirective,
-    NgbAccordionItem
+    NgbAccordionItem,
+    NgbAccordionHeader,
+    NgbAccordionButton,
+    NgbAccordionCollapse,
+    NgbAccordionBody
   ],
   templateUrl: './faq-section.component.html',
   styleUrl: './faq-section.component.scss'

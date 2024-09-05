@@ -4,7 +4,13 @@ import {Observable} from "rxjs";
 import {FAQData} from "../../shared/constants/common";
 import {HttpClient} from "@angular/common/http";
 import {commonPagesEndpoints} from "../../shared/endpoints/endpoints";
-import {NgbAccordionDirective, NgbAccordionItem} from "@ng-bootstrap/ng-bootstrap";
+import {
+    NgbAccordionBody,
+    NgbAccordionButton, NgbAccordionCollapse,
+    NgbAccordionDirective,
+    NgbAccordionHeader,
+    NgbAccordionItem
+} from "@ng-bootstrap/ng-bootstrap";
 import {BypassSecurityPipe} from "../../shared/pipes/bypass-security.pipe";
 import {HeaderComponent} from "../../components/header/header.component";
 import {AsyncPipe} from "@angular/common";
@@ -17,7 +23,11 @@ import {AsyncPipe} from "@angular/common";
         NgbAccordionItem,
         BypassSecurityPipe,
         HeaderComponent,
-        AsyncPipe
+        AsyncPipe,
+        NgbAccordionHeader,
+        NgbAccordionButton,
+        NgbAccordionCollapse,
+        NgbAccordionBody
     ],
     templateUrl: './faq.component.html',
     styleUrl: './faq.component.scss'

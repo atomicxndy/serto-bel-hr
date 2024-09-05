@@ -12,7 +12,7 @@ import {
 import {servicesPageEndpoints} from "../../shared/endpoints/endpoints";
 
 
-@Injectable({providedIn: "root"})
+@Injectable({providedIn: "any"})
 export class ServicesPageService {
     constructor(
         private httpClient: HttpClient,

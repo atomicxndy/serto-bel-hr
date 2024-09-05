@@ -1,10 +1,15 @@
 import {Component, Input} from '@angular/core';
 import {HomepageData} from "../../../shared/constants/homepage";
+import {NgOptimizedImage} from "@angular/common";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'sb-about-section',
   standalone: true,
-  imports: [],
+    imports: [
+        NgOptimizedImage,
+        RouterLink
+    ],
   templateUrl: './about-section.component.html',
   styleUrl: './about-section.component.scss'
 })

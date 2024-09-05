@@ -1,5 +1,5 @@
-@import "src/assets/styles/grid";
-@import 'bootstrap/scss/mixins';
+@import "src/assets/styles/_colors.scss";
+@import "node_modules/bootstrap/scss/_mixins.scss";
 
 .sb-homepage {
   &__basic-info-section {

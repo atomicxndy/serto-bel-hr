@@ -5,7 +5,7 @@ import {EndpointBuilderService} from "../../shared/services/endpoint-builder.ser
 import {HeaderLogo, HomepageData} from "../../shared/constants/homepage";
 import {commonPagesEndpoints} from "../../shared/endpoints/endpoints";
 
-@Injectable({providedIn: "root"})
+@Injectable({ providedIn: 'root'})
 export class HomepageService {
     constructor(
         private httpClient: HttpClient,

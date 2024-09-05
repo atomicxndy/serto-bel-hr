@@ -1,0 +1,21 @@
+select {
+  background: transparent;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
+.header-logos {
+  display: grid;
+  margin-top: 10px;
+}
+
+.sub-logo-img {
+  margin: 10px 0 0 30px;
+}
+
+.main-logo {
+  img {
+    height: 40px;
+  }
+}

@@ -27,7 +27,8 @@ import {EuFondsSectionComponent} from "./eu-fonds-section/eu-fonds-section.compo
     EuFondsSectionComponent
   ],
   templateUrl: './homepage.component.html',
-  styleUrl: './homepage.component.scss'
+  styleUrl: './homepage.component.scss',
+  providers: [HomepageService]
 })
 export class HomepageComponent implements OnInit {
   data$!: Observable<HomepageData>

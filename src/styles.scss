@@ -1,4 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
-
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
+
+@import "node_modules/animate.css/animate.css";
+
+@import "src/assets/styles/_grid.scss";
+@import "src/assets/styles/_colors.scss";
+@import "src/assets/styles/_theme.scss";
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+.sb-btn {
+  background: $sb-dark-blue;
+  color: $sb-white;
+}
+
+.sb-btn:hover {
+  background: $sb-dark-blue;
+  color: $sb-white;
+}
+
+
+html, body { height: 100%; }
+body {
+  margin: 0; font-family: "Open Sans", sans-serif !important;
+}

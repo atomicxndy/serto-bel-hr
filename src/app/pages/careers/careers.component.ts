@@ -6,7 +6,13 @@ import {EndpointBuilderService} from "../../shared/services/endpoint-builder.ser
 import {commonPagesEndpoints} from "../../shared/endpoints/endpoints";
 import {HeaderComponent} from "../../components/header/header.component";
 import {AsyncPipe} from "@angular/common";
-import {NgbAccordionDirective} from "@ng-bootstrap/ng-bootstrap";
+import {
+  NgbAccordionBody,
+  NgbAccordionButton, NgbAccordionCollapse,
+  NgbAccordionDirective,
+  NgbAccordionHeader,
+  NgbAccordionItem
+} from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: 'sb-careers',
@@ -14,7 +20,12 @@ import {NgbAccordionDirective} from "@ng-bootstrap/ng-bootstrap";
   imports: [
     HeaderComponent,
     AsyncPipe,
-    NgbAccordionDirective
+    NgbAccordionDirective,
+    NgbAccordionItem,
+    NgbAccordionHeader,
+    NgbAccordionButton,
+    NgbAccordionCollapse,
+    NgbAccordionBody
   ],
   templateUrl: './careers.component.html',
   styleUrl: './careers.component.scss'

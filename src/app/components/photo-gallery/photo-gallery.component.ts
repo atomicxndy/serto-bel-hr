@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {GalleryPageData} from "../../shared/constants/common";
 
 @Component({
   selector: 'sb-photo-gallery',
@@ -8,5 +9,17 @@ import { Component } from '@angular/core';
   styleUrl: './photo-gallery.component.scss'
 })
 export class PhotoGalleryComponent {
+  galleryPageData!: GalleryPageData;
+  images!: any[];
+  imagesUrls: string[] = [];
 
+  @Input("data")
+  set galleryPage(data: GalleryPageData) {
+    this.galleryPageData = data;
+    this.images = this.galleryPageData.data?.attributes?.images.data;
+
+    this.images.forEach((image: any) => {
+      this.imagesUrls.push(image.attributes.url);
+    });
+  }
 }
