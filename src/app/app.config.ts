@@ -6,12 +6,14 @@ import {HTTP_INTERCEPTORS, HttpClient, provideHttpClient, withFetch} from "@angu
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import {LoadingIndicatorService} from "./components/loading-indicator/loading-indicator.service";
 import {LoadingInterceptor} from "./core/interceptors/loading.interceptor";
+import {NgcCookieConsentService} from "ngx-cookieconsent";
 
 export const appConfig: ApplicationConfig = {
     providers: [
         HttpClient,
         BrowserModule,
         LoadingIndicatorService,
+        NgcCookieConsentService,
         provideRouter(routes),
         provideHttpClient(withFetch()),
         provideClientHydration(), provideAnimationsAsync(),
