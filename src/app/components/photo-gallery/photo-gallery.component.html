@@ -6,11 +6,11 @@
                 <h3 class="display-4 mb-10">{{ galleryPageData.data?.attributes?.imagesLabel }}</h3>
             </div>
         </div>
-        <div class="row">
+        <div class="row" infinite-scroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" [scrollWindow]="true">
             @for (imageUrl of imagesUrls; track imageUrl) {
                 <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
                     <div class="image">
-                        <img class="card-img-top" src="{{ imageUrl }}">
+                        <img alt="" class="card-img-top" [src]="imageUrl">
                     </div>
                 </div>
             }

@@ -7,7 +7,6 @@ import {commonPagesEndpoints} from "../../shared/endpoints/endpoints";
 import {HeaderComponent} from "../../components/header/header.component";
 import {PhotoGalleryComponent} from "../../components/photo-gallery/photo-gallery.component";
 import {VideoGalleryComponent} from "../../components/video-gallery/video-gallery.component";
-import {PageNotFoundComponent} from "../../components/page-not-found/page-not-found.component";
 import {AsyncPipe} from "@angular/common";
 
 @Component({
@@ -17,7 +16,6 @@ import {AsyncPipe} from "@angular/common";
         HeaderComponent,
         PhotoGalleryComponent,
         VideoGalleryComponent,
-        PageNotFoundComponent,
         AsyncPipe
     ],
     templateUrl: './gallery.component.html',
@@ -38,8 +36,7 @@ export class GalleryComponent implements OnInit {
 
     getImageAndVideoGalleryPageData(): Observable<GalleryPageData> {
         const url = this.endpointBuilderService.buildEndpointUrl(
-            commonPagesEndpoints.galleryPage
-        );
-        return this.httpClient.get<any>(url);
+            commonPagesEndpoints.galleryPage);
+        return this.httpClient.get<GalleryPageData>(url);
     }
 }

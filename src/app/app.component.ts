@@ -7,6 +7,7 @@ import {ServicesPageService} from "./pages/services/services-page.service";
 import {HttpClientModule} from "@angular/common/http";
 import {NavigationService} from "./components/navigation/navigation.service";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import {LoadingIndicatorComponent} from "./components/loading-indicator/loading-indicator.component";
 
 @Component({
     selector: 'app-root',
@@ -19,6 +20,7 @@ import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
         NavigationComponent,
         FooterComponent,
         NgbModule,
+        LoadingIndicatorComponent,
     ],
     providers: [HomepageService, ServicesPageService, NavigationService]
 })

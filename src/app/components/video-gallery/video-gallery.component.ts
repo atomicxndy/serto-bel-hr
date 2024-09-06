@@ -13,16 +13,16 @@ export class VideoGalleryComponent {
   videos!: any[];
   videosUrls: string[] = [];
 
-  //public player;
-
   @Input("data")
   set galleryPage(data: GalleryPageData) {
     this.galleryPageData = data;
 
     this.videos = this.galleryPageData.data?.attributes?.videos.data;
 
-    this.videos.forEach((video: any) => {
-      this.videosUrls.push(video.attributes.url);
-    });
+    if(!!this.videos) {
+      this.videos.forEach((video: any) => {
+        this.videosUrls.push(video.attributes.url);
+      });
+    }
   }
 }
