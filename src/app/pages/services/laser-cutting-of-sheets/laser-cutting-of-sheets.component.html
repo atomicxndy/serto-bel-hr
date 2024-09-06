@@ -1,1 +1,94 @@
-<p>laser-cutting-of-sheets works!</p>
+@if (data$ | async; as data) {
+    <sb-header [title]="data.data?.attributes?.headerTitle!"></sb-header>
+    <section class="wrapper bg-light">
+        <div class="container pt-11 pt-md-13 pb-11 pb-md-19 pb-lg-22 text-center">
+            <div class="row">
+                <div class="col-lg-8 col-xl-7 col-xxl-6 mx-auto" data-cues="slideInDown" data-group="page-title">
+                    <h1 class="display-1 fs-60 mb-4 px-md-15 px-lg-0">{{ data.data?.attributes?.mainTitle }}</h1>
+                    <p class="lead fs-24 lh-sm mb-7 mx-md-13 mx-lg-10">{{ data.data?.attributes?.mainSubtitle }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="wrapper bg-dark">
+        <div class="container pt-14 pt-md-16 pb-9 pb-md-11">
+            <figure class="rounded mt-md-n21 mt-lg-n23 mb-14">
+                <video class="video" id="plyrID" controls playsinline width="100%">
+                    <source src="{{ data.data?.attributes?.video.data.attributes.url }}" type="video/mp4">
+                </video>
+            </figure>
+        </div>
+    </section>
+
+    <section class="wrapper bg-light wrapper-border">
+        <div class="container pt-14 pt-md-16 pb-13 pb-md-15">
+            <div class="row">
+                <div class="col-lg-12">
+                    <article>
+                        <h2 class="display-1 mb-5">
+                            {{ data.data?.attributes?.contentTitle }}
+                        </h2>
+                        <div class="row gx-0">
+                            <div class="col-md-12 text-justify">
+                                <p class="description">{{ data.data?.attributes?.contentDescriptionTop }}</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="wrapper bg-light pt-15">
+        <div class="container pt-8 pt-md-14">
+            <div class="row gx-lg-0 gx-xl-8 gy-10 gy-md-13 gy-lg-0 mb-7 mb-md-10 mb-lg-16 align-items-center">
+                <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-1 position-relative order-lg-2" data-cue="zoomIn">
+                    <a routerLink="{{ data.data?.attributes?.bystronicLaserCuttingComponent?.urlLabel }}">
+                        <div class="shape bg-dot primary rellax w-17 h-19" data-rellax-speed="1" style="top: -1.7rem; left: -1.5rem;"></div>
+                        <div class="shape rounded bg-soft-primary rellax d-md-block" data-rellax-speed="0" style="bottom: -1.8rem; right: -0.8rem; width: 85%; height: 90%;"></div>
+                        <figure class="rounded"><img src="{{ data.data?.attributes?.bystronicImage.data.attributes.url }}" alt="" /></figure>
+                    </a>
+                </div>
+                <div class="col-lg-5 mt-lg-n10 text-center text-lg-start" data-cues="slideInDown" data-group="page-title" data-delay="600">
+                    <h1 class="display-1 mb-5">{{ data.data?.attributes?.bystronicLaserCuttingComponent?.title }}</h1>
+                    <p class="description">{{ data.data?.attributes?.bystronicLaserCuttingComponent?.description }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section class="wrapper bg-light">
+        <div class="container pt-8 pt-md-14">
+            <div class="row gx-lg-0 gx-xl-8 gy-10 gy-md-13 gy-lg-0 mb-7 mb-md-10 mb-lg-16 align-items-center">
+                <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-1 position-relative order-lg-2" data-cue="zoomIn">
+                    <a routerLink="{{ data.data?.attributes?.primaLaserCuttingComponent?.urlLabel }}">
+                        <div class="shape bg-dot primary rellax w-17 h-19" data-rellax-speed="1" style="top: -1.7rem; left: -1.5rem;"></div>
+                        <div class="shape rounded bg-soft-primary rellax d-md-block" data-rellax-speed="0" style="bottom: -1.8rem; right: -0.8rem; width: 85%; height: 90%;"></div>
+                        <figure class="rounded"><img src="{{ data.data?.attributes?.primaImage.data.attributes.url }}" alt="" /></figure>
+                    </a>
+                </div>
+                <div class="col-lg-5 mt-lg-n10 text-center text-lg-start" data-cues="slideInDown" data-group="page-title" data-delay="600">
+                    <h1 class="display-1 mb-5">{{ data.data?.attributes?.primaLaserCuttingComponent?.title }}</h1>
+                    <p class="description">{{ data.data?.attributes?.primaLaserCuttingComponent?.description }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="wrapper bg-light wrapper-border">
+        <div class="container pt-14 pt-md-16 pb-13 pb-md-15">
+            <div class="row">
+                <div class="col-lg-12">
+                    <article>
+                        <div class="row gx-0">
+                            <div class="col-md-12 text-justify">
+                                <p class="description">{{ data.data?.attributes?.contentDescriptionBottom }}</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+}

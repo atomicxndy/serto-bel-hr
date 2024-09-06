@@ -1,0 +1,25 @@
+@import "src/assets/styles/_colors.scss";
+@import "bootstrap/scss/_mixins.scss";
+@import "src/assets/styles/_grid.scss";
+
+.cards {
+  margin-top: 100px;
+
+  .card-header {
+    background-color: #0B0A09;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+}
+
+.blm-section-two-image {
+  width: 600px;
+  top: 10%;
+
+  @include media-breakpoint-down(md) {
+    width: 100%;
+    top: 0%;
+  }
+}

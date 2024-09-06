@@ -1,1 +1,7 @@
-<p>blm-software works!</p>
+@if (data$ | async; as pageData) {
+    <sb-header [title]="pageData.data?.attributes?.headerTitle!"></sb-header>
+    <sb-blm-software-section-one [pageData]="pageData"></sb-blm-software-section-one>
+    <sb-blm-software-section-two [pageData]="pageData"></sb-blm-software-section-two>
+    <sb-blm-image-text [data]="pageData.data?.attributes?.blmSoftwareTextComponentOne!" [image]="pageData.data?.attributes?.blmSoftwareTextImageOne"></sb-blm-image-text>
+    <sb-blm-image-text [data]="pageData.data?.attributes?.blmSoftwareTextComponentTwo!" [image]="pageData.data?.attributes?.blmSoftwareTextImageTwo"></sb-blm-image-text>
+}

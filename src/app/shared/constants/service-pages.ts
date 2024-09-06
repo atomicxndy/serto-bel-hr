@@ -199,8 +199,8 @@ export interface PrimaCuttingOptions {
     inoxCuttingOption?: string;
     steelLabel?: string;
     steelCuttingOption?: string;
-    aluminiumLabel?: string;
     aluminiumCuttingOption?: string;
+    aluminiumLabel?: string;
 }
 
 export interface BystronicPageData {
@@ -262,6 +262,49 @@ export interface CuttingOptionsTableBystronic {
     copperCuttingOption?: string;
     brassLabel?: string;
     brassCuttingOption?: string;
+}
+
+export interface LaserCuttingOfSheetsData {
+    data?: {
+        attributes?: {
+            headerTitle?: string;
+            mainTitle?: string;
+            mainSubtitle?: string;
+            contentTitle?: string;
+            contentDescriptionTop?: string;
+            contentDescriptionBottom?: string;
+            video?: any;
+            primaImage?: any;
+            bystronicImage?: any;
+            bystronicLaserCuttingComponent: BystronicLaserCuttingComponent;
+            primaLaserCuttingComponent: PrimaLaserCuttingComponent;
+        };
+    };
+}
+
+export interface LaserCuttingOfPipesData {
+    data?: {
+        attributes?: {
+            headerTitle?: string;
+            title?: string;
+            mainDescription?: any;
+            video?: any;
+        };
+    };
+}
+
+export interface BystronicLaserCuttingComponent {
+    id?: number;
+    title?: string;
+    description?: string;
+    urlLabel?: string;
+}
+
+export interface PrimaLaserCuttingComponent {
+    id?: number;
+    title?: string;
+    description?: string;
+    urlLabel?: string;
 }
 
 export interface LaserCuttingOfSheetsData {

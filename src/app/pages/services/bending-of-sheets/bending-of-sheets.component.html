@@ -1,1 +1,89 @@
-<p>bending-of-sheets works!</p>
+@if (data$ | async; as bendingPageData) {
+    <sb-video-header
+            [data]="bendingPageData"
+    ></sb-video-header>
+    <section class="wrapper bg-light">
+        <div class="container pt-14 pt-md-16 pb-13 pb-md-15">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <article>
+                        <h2 class="display-6 mb-4">
+                            {{ bendingPageData.data?.attributes?.title }}
+                        </h2>
+                        <div class="row gx-0">
+                            <div class="col-md-8 text-justify">
+                                <p class="description">{{ bendingPageData.data?.attributes?.description }}</p>
+                            </div>
+                            <div class="col-md-3 ms-auto">
+                                <div class="cutting-option-label">
+                                    {{
+                                        bendingPageData.data?.attributes?.cuttingOptionsTableBending
+                                            ?.label
+                                    }}
+                                </div>
+                                <table class="table table-bordered">
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            {{
+                                                bendingPageData.data?.attributes
+                                                    ?.cuttingOptionsTableBending?.inoxLabel
+                                            }}
+                                        </td>
+                                        <td>
+                                            {{
+                                                bendingPageData.data?.attributes
+                                                    ?.cuttingOptionsTableBending?.inoxCuttingOption
+                                            }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            {{
+                                                bendingPageData.data?.attributes
+                                                    ?.cuttingOptionsTableBending?.aluminiumLabel
+                                            }}
+                                        </td>
+                                        <td>
+                                            {{
+                                                bendingPageData.data?.attributes
+                                                    ?.cuttingOptionsTableBending?.aluminiumCuttingOption
+                                            }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            {{
+                                                bendingPageData.data?.attributes
+                                                    ?.cuttingOptionsTableBending?.steelLabel
+                                            }}
+                                        </td>
+                                        <td>
+                                            {{
+                                                bendingPageData.data?.attributes
+                                                    ?.cuttingOptionsTableBending?.steelCuttingOption
+                                            }}
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="wrapper bg-gray">
+        <div class="container pt-14 pt-md-16 pb-9 pb-md-11">
+            <figure class="rounded">
+                <video class="video" id="plyrID" controls playsinline width="100%">
+                    <source
+                            src="{{ bendingPageData.data?.attributes?.video.data.attributes.url }}"
+                            type="video/mp4"
+                    />
+                </video>
+            </figure>
+        </div>
+    </section>
+}

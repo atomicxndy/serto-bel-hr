@@ -1,0 +1,42 @@
+<section class="wrapper bg-light">
+    <div class="container py-14 py-md-16">
+        <div class="row gx-lg-8 gx-xl-12 gy-12 align-items-center">
+            <div class="col-lg-6 position-relative">
+                <div class="row gx-md-5 gy-5 align-items-center">
+                    <div class="col-md-6">
+                        <div class="row gx-md-5 gy-5">
+                            <div class="col-md-10 offset-md-2">
+                                <figure class="rounded"><img src="{{ imagesUrls[0] }}" alt=""></figure>
+                            </div>
+                            <div class="col-md-12">
+                                <figure class="rounded"><img src="{{ imagesUrls[1]}}" alt=""></figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <figure class="rounded"><img src="{{ imagesUrls[2] }}" alt=""></figure>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-6">
+                <h3 class="display-2 mb-5">{{ blmSoftwarePageData.data?.attributes?.blmSoftwareSectionOneComponent?.title }}</h3>
+                <p class="mb-7">{{ blmSoftwarePageData.data?.attributes?.blmSoftwareSectionOneComponent?.description }}</p>
+            </div>
+        </div>
+        <div class="row cards">
+            @for (item of blmSoftwarePageData.data?.attributes?.blmSoftwareCardsSectionOneComponent; track item) {
+                <div class="col-lg-3 col-sm-12">
+                    <div class="card">
+                        <div class="card-header">
+                            {{ item.title }}
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">{{ item.content }}</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

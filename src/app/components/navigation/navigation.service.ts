@@ -21,6 +21,7 @@ export interface NavigationData {
             blmSoftwareLabel?: string;
             bendingLabel?: string;
             servicesLabel?: string;
+            careersLabel?: string;
         };
     };
 }

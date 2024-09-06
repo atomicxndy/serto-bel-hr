@@ -1,1 +1,6 @@
-<p>services works!</p>
+@if (services$ | async; as services) {
+    <sb-video-header [data]="services"></sb-video-header>
+    <sb-services-item [service]="services.data.attributes.laserCuttingOfPipesService!" [image]="services.data.attributes.laserCuttingOfPipesImage"></sb-services-item>
+    <sb-services-item [service]="services.data.attributes.laserCuttingOfSheetsService!" [image]="services.data.attributes.laserCuttingOfSheetsImage"></sb-services-item>
+    <sb-services-item [service]="services.data.attributes.bendingService!" [image]="services.data.attributes.bendingImage"></sb-services-item>
+}

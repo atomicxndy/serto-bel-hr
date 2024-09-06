@@ -15,6 +15,7 @@ import {GalleryComponent} from "./pages/gallery/gallery.component";
 import {CareersComponent} from "./pages/careers/careers.component";
 import {HomepageComponent} from "./pages/homepage/homepage.component";
 import {AboutComponent} from "./pages/about/about.component";
+import {LaserCuttingSheetsComponent} from "./pages/services/laser-cutting-of-sheets/laser-cutting-of-sheets.component";
 
 export const routes: Routes = [
     {
@@ -69,7 +70,7 @@ export const routes: Routes = [
     },
     {
         path: "laser-cutting-of-sheets",
-        component: LaserCuttingOfPipesComponent,
+        component: LaserCuttingSheetsComponent,
         pathMatch: 'full'
     },
     {
