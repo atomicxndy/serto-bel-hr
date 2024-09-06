@@ -68,7 +68,7 @@ export class NavigationComponent implements OnInit, AfterContentChecked  {
     if (value === "hr") {
       this.router.navigateByUrl("/");
     } else if (value === "en") {
-      window.open("https://www.google.com", "_blank");
+      window.open("https://laser-sertobel.com", "_blank");
     }
   }
 }
