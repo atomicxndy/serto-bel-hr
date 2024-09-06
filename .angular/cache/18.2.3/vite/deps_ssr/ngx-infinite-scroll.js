@@ -14,17 +14,17 @@ import {
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵdirectiveInject
-} from "./chunk-R7JAHXZF.js";
+} from "./chunk-DH64UGMO.js";
 import {
   require_cjs
-} from "./chunk-CF6L2PRI.js";
+} from "./chunk-VDZEJD3D.js";
 import {
   __spreadProps,
   __spreadValues,
   __toESM
 } from "./chunk-NQ4HTGF6.js";
 
-// ../../../node_modules/ngx-infinite-scroll/fesm2022/ngx-infinite-scroll.mjs
+// node_modules/ngx-infinite-scroll/fesm2022/ngx-infinite-scroll.mjs
 var import_rxjs = __toESM(require_cjs(), 1);
 var import_operators = __toESM(require_operators(), 1);
 function resolveContainerElement(selector, scrollWindow, defaultElement, fromRoot) {

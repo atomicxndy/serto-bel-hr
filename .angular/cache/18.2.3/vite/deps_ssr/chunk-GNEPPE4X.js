@@ -1,7 +1,7 @@
 import { createRequire } from 'module';const require = createRequire(import.meta.url);
 import {
   DOCUMENT
-} from "./chunk-Z2YIKE77.js";
+} from "./chunk-M26M6KQO.js";
 import {
   ANIMATION_MODULE_TYPE,
   Inject,
@@ -13,13 +13,13 @@ import {
   setClassMetadata,
   ɵɵdefineInjectable,
   ɵɵinject
-} from "./chunk-R7JAHXZF.js";
+} from "./chunk-DH64UGMO.js";
 import {
   __objRest,
   __spreadValues
 } from "./chunk-NQ4HTGF6.js";
 
-// ../../../node_modules/@angular/animations/fesm2022/animations.mjs
+// node_modules/@angular/animations/fesm2022/animations.mjs
 var AnimationMetadataType;
 (function(AnimationMetadataType2) {
   AnimationMetadataType2[AnimationMetadataType2["State"] = 0] = "State";
@@ -431,7 +431,7 @@ var AnimationGroupPlayer = class {
 };
 var ɵPRE_STYLE = "!";
 
-// ../../../node_modules/@angular/animations/fesm2022/browser.mjs
+// node_modules/@angular/animations/fesm2022/browser.mjs
 var LINE_START = "\n - ";
 function invalidTimingValue(exp) {
   return new RuntimeError(3e3, ngDevMode && `The provided timing value "${exp}" is invalid.`);
@@ -4439,4 +4439,4 @@ export {
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-K3V5EXZQ.js.map
+//# sourceMappingURL=chunk-GNEPPE4X.js.map

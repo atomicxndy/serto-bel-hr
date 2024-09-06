@@ -12,7 +12,7 @@ import {
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵdirectiveInject
-} from "./chunk-55UJTXUY.js";
+} from "./chunk-Y4BMWLTS.js";
 import {
   filter,
   fromEvent,
@@ -21,13 +21,13 @@ import {
   of,
   tap,
   throttleTime
-} from "./chunk-4624E7YR.js";
+} from "./chunk-KN5IZJXX.js";
 import {
   __spreadProps,
   __spreadValues
-} from "./chunk-US4KYNGT.js";
+} from "./chunk-XKUCMAFN.js";
 
-// ../../../node_modules/ngx-infinite-scroll/fesm2022/ngx-infinite-scroll.mjs
+// node_modules/ngx-infinite-scroll/fesm2022/ngx-infinite-scroll.mjs
 function resolveContainerElement(selector, scrollWindow, defaultElement, fromRoot) {
   const hasWindow = window && !!window.document && window.document.documentElement;
   let container = hasWindow && scrollWindow ? window : defaultElement;
