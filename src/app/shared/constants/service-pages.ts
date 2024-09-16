@@ -81,6 +81,8 @@ export interface BLMSoftwarePageData {
             cardImageTwo?: any;
             cardImageThree?: any;
             cardImageFour?: any;
+            cardImageFix?: any;
+            cardImageSix?: any;
             blmSoftwareTextComponentOne?: BLMSoftwareTextComponentData;
             blmSoftwareTextComponentTwo?: BLMSoftwareTextComponentData;
             blmSoftwareTextComponentThree?: BLMSoftwareTextComponentData;
