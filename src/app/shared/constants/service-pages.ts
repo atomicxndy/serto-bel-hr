@@ -75,6 +75,8 @@ export interface BLMSoftwarePageData {
             blmCardWithImageTwo?: BLMCard;
             blmCardWithImageThree?: BLMCard;
             blmCardWithImageFour?: BLMCard;
+            blmCardWithImageFive?: BLMCard;
+            blmCardWithImageSix?: BLMCard;
             cardImageOne?: any;
             cardImageTwo?: any;
             cardImageThree?: any;
