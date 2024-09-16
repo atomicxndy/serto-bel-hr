@@ -30,7 +30,7 @@ import {Subscription} from "rxjs";
         NgbModule,
         LoadingIndicatorComponent,
     ],
-    providers: [HomepageService, ServicesPageService, NavigationService,NgcCookieConsentConfig]
+    providers: [HomepageService, ServicesPageService, NavigationService, NgcCookieConsentConfig]
 })
 export class AppComponent implements OnInit, OnDestroy {
 
@@ -44,10 +44,14 @@ export class AppComponent implements OnInit, OnDestroy {
     private revokeChoiceSubscription!: Subscription;
     private noCookieLawSubscription!: Subscription;
 
+    /* TO DO: add cookie bot consents */
+
+
     constructor(private ccService: NgcCookieConsentService) {
     }
 
     ngOnInit() {
+
         // subscribe to cookieconsent observables to react to main events
         this.popupOpenSubscription = this.ccService.popupOpen$.subscribe(
             () => {
@@ -93,6 +97,7 @@ export class AppComponent implements OnInit, OnDestroy {
                 // you can use this.ccService.getConfig() to do stuff...
             });
     }
+
 
     ngOnDestroy() {
         // unsubscribe to cookieconsent observables to prevent memory leaks
