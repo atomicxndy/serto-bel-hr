@@ -1,4 +1,4 @@
 export const environment = {
-    baseUrl: '',
-    storeFrontUrl: '',
+  baseUrl: "",
+  storeFrontUrl: "",
 };

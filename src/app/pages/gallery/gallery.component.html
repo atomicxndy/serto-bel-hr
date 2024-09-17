@@ -1,5 +1,5 @@
 @if (data$ | async; as galleryPage) {
-    <sb-header [title]="galleryPage.data?.attributes?.pageTitle!"></sb-header>
-    <sb-photo-gallery [data]="galleryPage"></sb-photo-gallery>
-    <sb-video-gallery [data]="galleryPage"></sb-video-gallery>
+  <sb-header [title]="galleryPage.data?.attributes?.pageTitle!"></sb-header>
+  <sb-photo-gallery [data]="galleryPage"></sb-photo-gallery>
+  <sb-video-gallery [data]="galleryPage"></sb-video-gallery>
 }

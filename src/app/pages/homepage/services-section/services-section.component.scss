@@ -5,14 +5,14 @@
       //background: url("../../../../assets/media/img/laser2.jpg") no-repeat center;
       background: #0d2067;
       .title,
-      .description{
+      .description {
         color: #fff;
       }
     }
 
     &-body:hover {
-      background: #0B0A09;
-      transition: ease-in-out .2s;
+      background: #0b0a09;
+      transition: ease-in-out 0.2s;
     }
   }
 }

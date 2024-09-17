@@ -1,17 +1,17 @@
 @if (data$ | async; as blmPageData) {
-    <sb-header [title]="blmPageData.data?.attributes?.headerTitle!"></sb-header>
-    <sb-blm-section-one [pageData]="blmPageData"></sb-blm-section-one>
-    <hr>
-    <sb-blm-section-two [pageData]="blmPageData"></sb-blm-section-two>
-    <section class="wrapper">
-        <div class="container-flex position-relative">
-            <div class="row">
-                <div class="col-lg-12 blm-section-image">
-                    <img src="{{ resolvedImgUrl }}" alt="">
-                </div>
-            </div>
+  <sb-header [title]="blmPageData.data?.attributes?.headerTitle!"></sb-header>
+  <sb-blm-section-one [pageData]="blmPageData"></sb-blm-section-one>
+  <hr />
+  <sb-blm-section-two [pageData]="blmPageData"></sb-blm-section-two>
+  <section class="wrapper">
+    <div class="container-flex position-relative">
+      <div class="row">
+        <div class="col-lg-12 blm-section-image">
+          <img src="{{ resolvedImgUrl }}" alt="" />
         </div>
-    </section>
-    <sb-blm-section-three [pageData]="blmPageData"></sb-blm-section-three>
-    <sb-blm-section-four [pageData]="blmPageData"></sb-blm-section-four>
+      </div>
+    </div>
+  </section>
+  <sb-blm-section-three [pageData]="blmPageData"></sb-blm-section-three>
+  <sb-blm-section-four [pageData]="blmPageData"></sb-blm-section-four>
 }

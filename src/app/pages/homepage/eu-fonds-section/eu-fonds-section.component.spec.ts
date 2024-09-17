@@ -1,23 +1,22 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { EuFondsSectionComponent } from './eu-fonds-section.component';
+import { EuFondsSectionComponent } from "./eu-fonds-section.component";
 
-describe('EuFondsSectionComponent', () => {
+describe("EuFondsSectionComponent", () => {
   let component: EuFondsSectionComponent;
   let fixture: ComponentFixture<EuFondsSectionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [EuFondsSectionComponent]
-    })
-    .compileComponents();
+      imports: [EuFondsSectionComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(EuFondsSectionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

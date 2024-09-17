@@ -1,15 +1,15 @@
 @if (imagesUrls) {
-    <section class="wrapper bg-gray pb-15">
-        <div class="container pt-14 pt-md-16">
-            <div class="row">
-                @for (imageUrl of imagesUrls; track imageUrl) {
-                    <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
-                        <div class="image">
-                            <img class="card-img-top" src="{{ imageUrl }}">
-                        </div>
-                    </div>
-                }
+  <section class="wrapper bg-gray pb-15">
+    <div class="container pt-14 pt-md-16">
+      <div class="row">
+        @for (imageUrl of imagesUrls; track imageUrl) {
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+            <div class="image">
+              <img class="card-img-top" src="{{ imageUrl }}" />
             </div>
-        </div>
-    </section>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
 }

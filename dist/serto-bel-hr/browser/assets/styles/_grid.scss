@@ -11,13 +11,13 @@ $grid-gutter-banner-width: 0;
 
 // Grid breakpoints
 $grid-breakpoints: (
-        xs: 0,
-        sm: 360px,
-        md: 576px,
-        lg: 992px,
-        xl: 1200px,
-        xxl: 1400px,
-        xxxl: 1700px,
+  xs: 0,
+  sm: 360px,
+  md: 576px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  xxxl: 1700px,
 );
 
 // Grid containers
@@ -25,8 +25,8 @@ $grid-breakpoints: (
 $container-max-widths: (
   //sm: 375px,
   //md: 540px,
-        lg: 960px + $grid-gutter-width,
-        xl: 1140px + $grid-gutter-width,
-        xxl: 1320px + $grid-gutter-width,
-        xxxl: 1600px + $grid-gutter-width
+  lg: 960px + $grid-gutter-width,
+  xl: 1140px + $grid-gutter-width,
+  xxl: 1320px + $grid-gutter-width,
+  xxxl: 1600px + $grid-gutter-width
 );

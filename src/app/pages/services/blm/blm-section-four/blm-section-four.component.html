@@ -1,38 +1,48 @@
 <section class="wrapper pt-10">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12">
-                <div class="display-2">{{ pageData.data?.attributes?.blmSectionFourComponent?.firstTitle }}</div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12">
-                <div class="subtitle">
-                    {{ pageData.data?.attributes?.blmSectionFourComponent?.firstDescription }}
-                </div>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="display-2">
+          {{ pageData.data?.attributes?.blmSectionFourComponent?.firstTitle }}
         </div>
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12">
-                <div class="display-2 title-second">
-                    {{ pageData.data?.attributes?.blmSectionFourComponent?.secondTitle }}
-                </div>
-                <div class="subtitle">
-                    {{ pageData.data?.attributes?.blmSectionFourComponent?.secondDescription }}
-                </div>
-            </div>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="subtitle">
+          {{
+            pageData.data?.attributes?.blmSectionFourComponent?.firstDescription
+          }}
         </div>
-        <div class="row cards">
-            @for (card of pageData.data?.attributes?.blmCardSectionFourComponent; track card) {
-                <div class="col-lg-3 col-sm-12">
-                    <div class="card">
-                        <div class="card-header">
-                            {{ card.title }}
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text">{{ card.content }}</p>
-                        </div>
-                    </div>
-                </div>
-            }
-        </div>
+      </div>
     </div>
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="display-2 title-second">
+          {{ pageData.data?.attributes?.blmSectionFourComponent?.secondTitle }}
+        </div>
+        <div class="subtitle">
+          {{
+            pageData.data?.attributes?.blmSectionFourComponent
+              ?.secondDescription
+          }}
+        </div>
+      </div>
+    </div>
+    <div class="row cards">
+      @for (
+        card of pageData.data?.attributes?.blmCardSectionFourComponent;
+        track card
+      ) {
+        <div class="col-lg-3 col-sm-12">
+          <div class="card">
+            <div class="card-header">
+              {{ card.title }}
+            </div>
+            <div class="card-body">
+              <p class="card-text">{{ card.content }}</p>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
 </section>

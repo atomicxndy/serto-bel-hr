@@ -1,83 +1,86 @@
 @if (data$ | async; as prima) {
-    <sb-header
-            [title]="prima.data.attributes.headerTitle!"
-    ></sb-header>
-    <section class="wrapper bg-light">
-        <div class="container pt-14 pt-md-16 pb-13 pb-md-15">
-            <div class="row">
-                <div class="col-lg-10 offset-lg-1">
-                    <article>
-                        <h2 class="display-6 mb-4">{{ prima.data.attributes.title }}</h2>
-                        <div class="row gx-0">
-                            <div class="col-md-8 text-justify">
-                                <p class="description">{{ prima.data.attributes.description }}</p>
-                            </div>
-                            <div class="col-md-3 ms-auto">
-                                <div class="cutting-option-label">
-                                    {{ prima.data.attributes.cuttingOptionsTablePrima?.label }}
-                                </div>
-                                <table class="table table-bordered">
-                                    <tbody>
-                                    <tr>
-                                        <td>
-                                            {{
-                                                prima.data.attributes.cuttingOptionsTablePrima
-                                                    ?.inoxLabel
-                                            }}
-                                        </td>
-                                        <td>
-                                            {{
-                                                prima.data.attributes.cuttingOptionsTablePrima
-                                                    ?.inoxCuttingOption
-                                            }}
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            {{
-                                                prima.data.attributes.cuttingOptionsTablePrima
-                                                    ?.aluminiumLabel
-                                            }}
-                                        </td>
-                                        <td>
-                                            {{
-                                                prima.data.attributes.cuttingOptionsTablePrima
-                                                    ?.aluminiumCuttingOption
-                                            }}
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            {{
-                                                prima.data.attributes.cuttingOptionsTablePrima
-                                                    ?.steelLabel
-                                            }}
-                                        </td>
-                                        <td>
-                                            {{
-                                                prima.data.attributes.cuttingOptionsTablePrima
-                                                    ?.steelCuttingOption
-                                            }}
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </article>
+  <sb-header [title]="prima.data.attributes.headerTitle!"></sb-header>
+  <section class="wrapper bg-light">
+    <div class="container pt-14 pt-md-16 pb-13 pb-md-15">
+      <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+          <article>
+            <h2 class="display-6 mb-4">{{ prima.data.attributes.title }}</h2>
+            <div class="row gx-0">
+              <div class="col-md-8 text-justify">
+                <p class="description">
+                  {{ prima.data.attributes.description }}
+                </p>
+              </div>
+              <div class="col-md-3 ms-auto">
+                <div class="cutting-option-label">
+                  {{ prima.data.attributes.cuttingOptionsTablePrima?.label }}
                 </div>
+                <table class="table table-bordered">
+                  <tbody>
+                    <tr>
+                      <td>
+                        {{
+                          prima.data.attributes.cuttingOptionsTablePrima
+                            ?.inoxLabel
+                        }}
+                      </td>
+                      <td>
+                        {{
+                          prima.data.attributes.cuttingOptionsTablePrima
+                            ?.inoxCuttingOption
+                        }}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        {{
+                          prima.data.attributes.cuttingOptionsTablePrima
+                            ?.aluminiumLabel
+                        }}
+                      </td>
+                      <td>
+                        {{
+                          prima.data.attributes.cuttingOptionsTablePrima
+                            ?.aluminiumCuttingOption
+                        }}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        {{
+                          prima.data.attributes.cuttingOptionsTablePrima
+                            ?.steelLabel
+                        }}
+                      </td>
+                      <td>
+                        {{
+                          prima.data.attributes.cuttingOptionsTablePrima
+                            ?.steelCuttingOption
+                        }}
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
+          </article>
         </div>
-    </section>
-    <section class="wrapper bg-gray pb-15">
-        <div class="container pt-14 pt-md-16">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12">
-                    <div class="image">
-                        <img class="card-img-top" src="{{ prima.data.attributes.image.data.attributes.url }}" />
-                    </div>
-                </div>
-            </div>
+      </div>
+    </div>
+  </section>
+  <section class="wrapper bg-gray pb-15">
+    <div class="container pt-14 pt-md-16">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="image">
+            <img
+              class="card-img-top"
+              src="{{ prima.data.attributes.image.data.attributes.url }}"
+            />
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 }

@@ -1,21 +1,22 @@
-import {Component, OnInit} from '@angular/core';
-import {Observable} from "rxjs";
-import {CareersPageData} from "../../shared/constants/common";
-import {HttpClient} from "@angular/common/http";
-import {EndpointBuilderService} from "../../shared/services/endpoint-builder.service";
-import {commonPagesEndpoints} from "../../shared/endpoints/endpoints";
-import {HeaderComponent} from "../../components/header/header.component";
-import {AsyncPipe} from "@angular/common";
+import { Component, OnInit } from "@angular/core";
+import { Observable } from "rxjs";
+import { CareersPageData } from "../../shared/constants/common";
+import { HttpClient } from "@angular/common/http";
+import { EndpointBuilderService } from "../../shared/services/endpoint-builder.service";
+import { commonPagesEndpoints } from "../../shared/endpoints/endpoints";
+import { HeaderComponent } from "../../components/header/header.component";
+import { AsyncPipe } from "@angular/common";
 import {
   NgbAccordionBody,
-  NgbAccordionButton, NgbAccordionCollapse,
+  NgbAccordionButton,
+  NgbAccordionCollapse,
   NgbAccordionDirective,
   NgbAccordionHeader,
-  NgbAccordionItem
+  NgbAccordionItem,
 } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
-  selector: 'sb-careers',
+  selector: "sb-careers",
   standalone: true,
   imports: [
     HeaderComponent,
@@ -25,17 +26,17 @@ import {
     NgbAccordionHeader,
     NgbAccordionButton,
     NgbAccordionCollapse,
-    NgbAccordionBody
+    NgbAccordionBody,
   ],
-  templateUrl: './careers.component.html',
-  styleUrl: './careers.component.scss'
+  templateUrl: "./careers.component.html",
+  styleUrl: "./careers.component.scss",
 })
 export class CareersComponent implements OnInit {
   data$!: Observable<CareersPageData>;
 
   constructor(
-      private httpClient: HttpClient,
-      private endpointBuilderService: EndpointBuilderService,
+    private httpClient: HttpClient,
+    private endpointBuilderService: EndpointBuilderService,
   ) {}
 
   ngOnInit() {
@@ -44,7 +45,7 @@ export class CareersComponent implements OnInit {
 
   getCareersPageData(): Observable<CareersPageData> {
     const url = this.endpointBuilderService.buildEndpointUrl(
-        commonPagesEndpoints.careers
+      commonPagesEndpoints.careers,
     );
 
     return this.httpClient.get<CareersPageData>(url);

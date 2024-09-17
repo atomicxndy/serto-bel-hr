@@ -1,27 +1,46 @@
 <section class="wrapper">
-    <div class="container pt-5 pb-15 py-lg-17 py-xl-19 pb-xl-20 position-relative">
-        <img class="position-lg-absolute blm-section-two-image col-12 col-lg-10 col-xl-11 col-xxl-10 px-lg-5 px-xl-0 ms-n5 ms-sm-n8 ms-md-n10 ms-lg-0 mb-md-4 mb-lg-0" src="{{ resolvedImgUrl }}" alt="" />
-        <div class="row gx-0 align-items-center">
-            <div class="col-md-10 offset-md-1 col-lg-5 offset-lg-7 offset-xxl-6 ps-xxl-12 mt-md-n9 text-center text-lg-start">
-                <h1 class="display-2 mb-4 mx-sm-n2 mx-md-0">{{ blmPageData.data?.attributes?.blmSectionTwoComponent?.title }}</h1>
-                <p class="lead fs-lg mb-7 px-md-10 px-lg-0">{{ blmPageData.data?.attributes?.blmSectionTwoComponent?.subtitle }}</p>
-                <div class="d-flex justify-content-center justify-content-lg-start" data-cues="slideInDown" data-group="page-title-buttons" data-delay="900">
-                </div>
-            </div>
-        </div>
-        <div class="row gx-0 cards">
-            @for (card of blmPageData.data?.attributes?.blmCardSectionTwoComponent; track card) {
-                <div class="col-lg-4 col-sm-12 p-5">
-                    <div class="card">
-                        <div class="card-header">
-                            {{ card.title }}
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text">{{ card.content }}</p>
-                        </div>
-                    </div>
-                </div>
-            }
-        </div>
+  <div
+    class="container pt-5 pb-15 py-lg-17 py-xl-19 pb-xl-20 position-relative"
+  >
+    <img
+      class="position-lg-absolute blm-section-two-image col-12 col-lg-10 col-xl-11 col-xxl-10 px-lg-5 px-xl-0 ms-n5 ms-sm-n8 ms-md-n10 ms-lg-0 mb-md-4 mb-lg-0"
+      src="{{ resolvedImgUrl }}"
+      alt=""
+    />
+    <div class="row gx-0 align-items-center">
+      <div
+        class="col-md-10 offset-md-1 col-lg-5 offset-lg-7 offset-xxl-6 ps-xxl-12 mt-md-n9 text-center text-lg-start"
+      >
+        <h1 class="display-2 mb-4 mx-sm-n2 mx-md-0">
+          {{ blmPageData.data?.attributes?.blmSectionTwoComponent?.title }}
+        </h1>
+        <p class="lead fs-lg mb-7 px-md-10 px-lg-0">
+          {{ blmPageData.data?.attributes?.blmSectionTwoComponent?.subtitle }}
+        </p>
+        <div
+          class="d-flex justify-content-center justify-content-lg-start"
+          data-cues="slideInDown"
+          data-group="page-title-buttons"
+          data-delay="900"
+        ></div>
+      </div>
     </div>
+    <div class="row gx-0 cards">
+      @for (
+        card of blmPageData.data?.attributes?.blmCardSectionTwoComponent;
+        track card
+      ) {
+        <div class="col-lg-4 col-sm-12 p-5">
+          <div class="card">
+            <div class="card-header">
+              {{ card.title }}
+            </div>
+            <div class="card-body">
+              <p class="card-text">{{ card.content }}</p>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
 </section>

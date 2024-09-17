@@ -1,23 +1,22 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { BlmSoftwareSectionThreeComponent } from './blm-software-section-three.component';
+import { BlmSoftwareSectionThreeComponent } from "./blm-software-section-three.component";
 
-describe('BlmSoftwareSectionThreeComponent', () => {
+describe("BlmSoftwareSectionThreeComponent", () => {
   let component: BlmSoftwareSectionThreeComponent;
   let fixture: ComponentFixture<BlmSoftwareSectionThreeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BlmSoftwareSectionThreeComponent]
-    })
-    .compileComponents();
+      imports: [BlmSoftwareSectionThreeComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(BlmSoftwareSectionThreeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

@@ -1,23 +1,22 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { BendingOfSheetsComponent } from './bending-of-sheets.component';
+import { BendingOfSheetsComponent } from "./bending-of-sheets.component";
 
-describe('BendingOfSheetsComponent', () => {
+describe("BendingOfSheetsComponent", () => {
   let component: BendingOfSheetsComponent;
   let fixture: ComponentFixture<BendingOfSheetsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BendingOfSheetsComponent]
-    })
-    .compileComponents();
+      imports: [BendingOfSheetsComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(BendingOfSheetsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

@@ -1,46 +1,62 @@
 <section class="wrapper bg-light">
-    <div class="container">
-        <div class="row section-three">
-            <div class="col-lg-6 left-content">
-                <div class="row">
-                    <div class="col-lg-12 title display-2">
-                        {{ blmSoftwarePageData.data?.attributes?.blmSoftwareSectionThreeComponent?.title }}
-                    </div>
-                    <div class="col-lg-12 subtitle display-6">
-                        {{ blmSoftwarePageData.data?.attributes?.blmSoftwareSectionThreeComponent?.subtitle }}
-                    </div>
-                    <div class="col-lg-12 cards">
-                        @for (card of blmSoftwarePageData.data?.attributes?.blmSoftwareCardsSectionThreeComponent; track card) {
-                            <div class="card mb-5">
-                                <div class="title">
-                                    {{ card.title }}
-                                </div>
-                                <div class="content">
-                                    {{ card.content }}
-                                </div>
-                            </div>
-                        }
-                    </div>
+  <div class="container">
+    <div class="row section-three">
+      <div class="col-lg-6 left-content">
+        <div class="row">
+          <div class="col-lg-12 title display-2">
+            {{
+              blmSoftwarePageData.data?.attributes
+                ?.blmSoftwareSectionThreeComponent?.title
+            }}
+          </div>
+          <div class="col-lg-12 subtitle display-6">
+            {{
+              blmSoftwarePageData.data?.attributes
+                ?.blmSoftwareSectionThreeComponent?.subtitle
+            }}
+          </div>
+          <div class="col-lg-12 cards">
+            @for (
+              card of blmSoftwarePageData.data?.attributes
+                ?.blmSoftwareCardsSectionThreeComponent;
+              track card
+            ) {
+              <div class="card mb-5">
+                <div class="title">
+                  {{ card.title }}
                 </div>
-            </div>
-            <div class="col-lg-6 right-content">
-                <div class="col-lg-12 title display-2">
-                    {{ blmSoftwarePageData.data?.attributes?.blmSoftwareSectionThreeComponent?.technicalSpecsTitle }}
+                <div class="content">
+                  {{ card.content }}
                 </div>
-                <div class="col-lg-12 specs-table">
-                    <table class="table table-bordered">
-                        <tbody>
-                            @for (tableData of blmSoftwarePageData.data?.attributes?.blmTechnicalSpecificationsComponent; track tableData) {
-                                <tr>
-                                    <th>{{ tableData.item }}</th>
-                                    <td>{{ tableData.description }}</td>
-                                </tr>
-                            }
-                        </tbody>
-                    </table>
-
-                </div>
-            </div>
+              </div>
+            }
+          </div>
         </div>
+      </div>
+      <div class="col-lg-6 right-content">
+        <div class="col-lg-12 title display-2">
+          {{
+            blmSoftwarePageData.data?.attributes
+              ?.blmSoftwareSectionThreeComponent?.technicalSpecsTitle
+          }}
+        </div>
+        <div class="col-lg-12 specs-table">
+          <table class="table table-bordered">
+            <tbody>
+              @for (
+                tableData of blmSoftwarePageData.data?.attributes
+                  ?.blmTechnicalSpecificationsComponent;
+                track tableData
+              ) {
+                <tr>
+                  <th>{{ tableData.item }}</th>
+                  <td>{{ tableData.description }}</td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
+  </div>
 </section>

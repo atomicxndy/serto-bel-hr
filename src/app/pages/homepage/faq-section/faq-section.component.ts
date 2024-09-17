@@ -1,16 +1,17 @@
-import {Component, Input} from '@angular/core';
-import {HomepageData} from "../../../shared/constants/homepage";
+import { Component, Input } from "@angular/core";
+import { HomepageData } from "../../../shared/constants/homepage";
 import {
   NgbAccordionBody,
-  NgbAccordionButton, NgbAccordionCollapse,
+  NgbAccordionButton,
+  NgbAccordionCollapse,
   NgbAccordionDirective,
   NgbAccordionHeader,
-  NgbAccordionItem
+  NgbAccordionItem,
 } from "@ng-bootstrap/ng-bootstrap";
-import {RouterLink} from "@angular/router";
+import { RouterLink } from "@angular/router";
 
 @Component({
-  selector: 'sb-faq-section',
+  selector: "sb-faq-section",
   standalone: true,
   imports: [
     NgbAccordionDirective,
@@ -19,10 +20,10 @@ import {RouterLink} from "@angular/router";
     NgbAccordionButton,
     NgbAccordionCollapse,
     NgbAccordionBody,
-    RouterLink
+    RouterLink,
   ],
-  templateUrl: './faq-section.component.html',
-  styleUrl: './faq-section.component.scss'
+  templateUrl: "./faq-section.component.html",
+  styleUrl: "./faq-section.component.scss",
 })
 export class FaqSectionComponent {
   @Input() data!: HomepageData;

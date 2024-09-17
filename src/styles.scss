@@ -1,7 +1,6 @@
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@use '@angular/material' as mat;
+@use "@angular/material" as mat;
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -10,16 +9,18 @@
 @include mat.core();
 
 // Define the theme object.
-$serto-bel-hr-theme: mat.define-theme((
-  color: (
-    theme-type: light,
-    primary: mat.$azure-palette,
-    tertiary: mat.$blue-palette,
-  ),
-  density: (
-    scale: 0,
+$serto-bel-hr-theme: mat.define-theme(
+  (
+    color: (
+      theme-type: light,
+      primary: mat.$azure-palette,
+      tertiary: mat.$blue-palette,
+    ),
+    density: (
+      scale: 0,
+    ),
   )
-));
+);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
@@ -36,7 +37,7 @@ $serto-bel-hr-theme: mat.define-theme((
 // @include mat.color-variants-backwards-compatibility($serto-bel-hr-theme);
 /* You can add global styles to this file, and also import other style files */
 /* Importing Bootstrap SCSS file. */
-@import 'node_modules/bootstrap/dist/css/bootstrap.css';
+@import "node_modules/bootstrap/dist/css/bootstrap.css";
 
 @import "node_modules/animate.css/animate.css";
 
@@ -45,8 +46,8 @@ $serto-bel-hr-theme: mat.define-theme((
 @import "src/assets/styles/_theme.scss";
 
 // fonts
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 .sb-btn {
   background: $sb-dark-blue;
@@ -58,11 +59,20 @@ $serto-bel-hr-theme: mat.define-theme((
   color: $sb-white;
 }
 
-
-html, body { height: 100%; }
+html,
 body {
-  margin: 0; font-family: "Open Sans", sans-serif !important;
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif !important;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

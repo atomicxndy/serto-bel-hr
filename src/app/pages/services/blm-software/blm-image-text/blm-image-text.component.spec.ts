@@ -1,23 +1,22 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { BlmImageTextComponent } from './blm-image-text.component';
+import { BlmImageTextComponent } from "./blm-image-text.component";
 
-describe('BlmImageTextComponent', () => {
+describe("BlmImageTextComponent", () => {
   let component: BlmImageTextComponent;
   let fixture: ComponentFixture<BlmImageTextComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BlmImageTextComponent]
-    })
-    .compileComponents();
+      imports: [BlmImageTextComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(BlmImageTextComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

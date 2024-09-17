@@ -1,70 +1,153 @@
 @if (pageData$ | async; as pageData) {
-    <sb-header [title]="pageData.data.attributes.headerTitle!"></sb-header>
-    <section class="wrapper bg-light">
-        <div class="container py-14 py-md-16">
-            <div class="row gx-md-8 gx-xl-12 gy-10 align-items-center">
-                <div class="col-md-8 col-lg-6 offset-lg-0 col-xl-5 offset-xl-1 position-relative">
-                    <div class="shape bg-dot primary rellax w-17 h-21" data-rellax-speed="1" style="top: -2rem; left: -1.4rem;"></div>
-                    <figure class="rounded"><img src="{{ pageData.data.attributes.image.data.attributes.url }}" alt=""></figure>
-                </div>
-                <div class="col-lg-6">
-                    <h2 class="display-4 mb-8">{{ pageData.data.attributes.title }}</h2>
-                    <div class="d-flex flex-row">
-                        <div>
-                            <div class="icon text-primary fs-28 me-6 mt-n1"> <i class="uil uil-location-pin-alt"></i> </div>
-                        </div>
-                        <div>
-                            <h5 class="mb-1">{{ pageData.data.attributes.contactUsAddressInfoComponent?.addressLabel }}</h5>
-                            <address>{{ pageData.data.attributes.contactUsAddressInfoComponent?.addressContent }}</address>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-row">
-                        <div>
-                            <div class="icon text-primary fs-28 me-6 mt-n1"> <i class="uil uil-phone-volume"></i> </div>
-                        </div>
-                        <div>
-                            <h5 class="mb-1">{{ pageData.data.attributes.contactUsAddressInfoComponent?.phoneNumberLabel }}</h5>
-                            <p>{{ pageData.data.attributes.contactUsAddressInfoComponent?.phoneNumberContent }}</p>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-row">
-                        <div>
-                            <div class="icon text-primary fs-28 me-6 mt-n1"> <i class="uil uil-clock"></i> </div>
-                        </div>
-                        <div>
-                            <h5 class="mb-1">{{ pageData.data.attributes.contactUsAddressInfoComponent?.workingHoursLabel }}</h5>
-                            <p>{{ pageData.data.attributes.contactUsAddressInfoComponent?.workingHoursContent }}</p>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-row">
-                        <div>
-                            <div class="icon text-primary fs-28 me-6 mt-n1"> <i class="uil uil-envelope"></i> </div>
-                        </div>
-                        <div>
-                            <h5 class="mb-1">{{ pageData.data.attributes.contactUsAddressInfoComponent?.emailLabel }}</h5>
-                            <p class="mb-0"><a href="mailto:{{pageData.data.attributes.contactUsAddressInfoComponent?.emailSales}}" class="link-body">{{pageData.data.attributes.contactUsAddressInfoComponent?.emailSales}}</a></p>
-                            <p class="mb-0"><a href="mailto:{{pageData.data.attributes.contactUsAddressInfoComponent?.emailInfo}}" class="link-body">{{pageData.data.attributes.contactUsAddressInfoComponent?.emailInfo}}</a></p>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-row mt-3">
-                        <button class="btn btn-lg sb-btn btn-icon btn-icon-end btn-download" (click)="downloadPdfFile()">
-                            <div>
-                                <div class="icon text-primary fs-28 me-6 mt-n1"> <i class="uil uil-file"></i> </div>
-                            </div>
-                            <p>{{ pageData.data.attributes.pdfDownloadLabel }}</p>
-                        </button>
-                    </div>
-                </div>
-            </div>
+  <sb-header [title]="pageData.data.attributes.headerTitle!"></sb-header>
+  <section class="wrapper bg-light">
+    <div class="container py-14 py-md-16">
+      <div class="row gx-md-8 gx-xl-12 gy-10 align-items-center">
+        <div
+          class="col-md-8 col-lg-6 offset-lg-0 col-xl-5 offset-xl-1 position-relative"
+        >
+          <div
+            class="shape bg-dot primary rellax w-17 h-21"
+            data-rellax-speed="1"
+            style="top: -2rem; left: -1.4rem"
+          ></div>
+          <figure class="rounded">
+            <img
+              src="{{ pageData.data.attributes.image.data.attributes.url }}"
+              alt=""
+            />
+          </figure>
         </div>
-    </section>
-    <sb-notes [data]="pageData"></sb-notes>
+        <div class="col-lg-6">
+          <h2 class="display-4 mb-8">{{ pageData.data.attributes.title }}</h2>
+          <div class="d-flex flex-row">
+            <div>
+              <div class="icon text-primary fs-28 me-6 mt-n1">
+                <i class="uil uil-location-pin-alt"></i>
+              </div>
+            </div>
+            <div>
+              <h5 class="mb-1">
+                {{
+                  pageData.data.attributes.contactUsAddressInfoComponent
+                    ?.addressLabel
+                }}
+              </h5>
+              <address>
+                {{
+                  pageData.data.attributes.contactUsAddressInfoComponent
+                    ?.addressContent
+                }}
+              </address>
+            </div>
+          </div>
+          <div class="d-flex flex-row">
+            <div>
+              <div class="icon text-primary fs-28 me-6 mt-n1">
+                <i class="uil uil-phone-volume"></i>
+              </div>
+            </div>
+            <div>
+              <h5 class="mb-1">
+                {{
+                  pageData.data.attributes.contactUsAddressInfoComponent
+                    ?.phoneNumberLabel
+                }}
+              </h5>
+              <p>
+                {{
+                  pageData.data.attributes.contactUsAddressInfoComponent
+                    ?.phoneNumberContent
+                }}
+              </p>
+            </div>
+          </div>
+          <div class="d-flex flex-row">
+            <div>
+              <div class="icon text-primary fs-28 me-6 mt-n1">
+                <i class="uil uil-clock"></i>
+              </div>
+            </div>
+            <div>
+              <h5 class="mb-1">
+                {{
+                  pageData.data.attributes.contactUsAddressInfoComponent
+                    ?.workingHoursLabel
+                }}
+              </h5>
+              <p>
+                {{
+                  pageData.data.attributes.contactUsAddressInfoComponent
+                    ?.workingHoursContent
+                }}
+              </p>
+            </div>
+          </div>
+          <div class="d-flex flex-row">
+            <div>
+              <div class="icon text-primary fs-28 me-6 mt-n1">
+                <i class="uil uil-envelope"></i>
+              </div>
+            </div>
+            <div>
+              <h5 class="mb-1">
+                {{
+                  pageData.data.attributes.contactUsAddressInfoComponent
+                    ?.emailLabel
+                }}
+              </h5>
+              <p class="mb-0">
+                <a
+                  href="mailto:{{
+                    pageData.data.attributes.contactUsAddressInfoComponent
+                      ?.emailSales
+                  }}"
+                  class="link-body"
+                  >{{
+                    pageData.data.attributes.contactUsAddressInfoComponent
+                      ?.emailSales
+                  }}</a
+                >
+              </p>
+              <p class="mb-0">
+                <a
+                  href="mailto:{{
+                    pageData.data.attributes.contactUsAddressInfoComponent
+                      ?.emailInfo
+                  }}"
+                  class="link-body"
+                  >{{
+                    pageData.data.attributes.contactUsAddressInfoComponent
+                      ?.emailInfo
+                  }}</a
+                >
+              </p>
+            </div>
+          </div>
+          <div class="d-flex flex-row mt-3">
+            <button
+              class="btn btn-lg sb-btn btn-icon btn-icon-end btn-download"
+              (click)="downloadPdfFile()"
+            >
+              <div>
+                <div class="icon text-primary fs-28 me-6 mt-n1">
+                  <i class="uil uil-file"></i>
+                </div>
+              </div>
+              <p>{{ pageData.data.attributes.pdfDownloadLabel }}</p>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <sb-notes [data]="pageData"></sb-notes>
 
-    @if (!!pageData.data.attributes.additionalInfo) {
-        <sb-additional-info [data]="pageData"></sb-additional-info>
-    }
+  @if (!!pageData.data.attributes.additionalInfo) {
+    <sb-additional-info [data]="pageData"></sb-additional-info>
+  }
 
-    <section>
-        <sb-google-map></sb-google-map>
-    </section>
+  <section>
+    <sb-google-map></sb-google-map>
+  </section>
 }

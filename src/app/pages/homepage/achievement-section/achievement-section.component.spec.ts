@@ -1,23 +1,22 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { AchievementSectionComponent } from './achievement-section.component';
+import { AchievementSectionComponent } from "./achievement-section.component";
 
-describe('AchievementSectionComponent', () => {
+describe("AchievementSectionComponent", () => {
   let component: AchievementSectionComponent;
   let fixture: ComponentFixture<AchievementSectionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AchievementSectionComponent]
-    })
-    .compileComponents();
+      imports: [AchievementSectionComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(AchievementSectionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

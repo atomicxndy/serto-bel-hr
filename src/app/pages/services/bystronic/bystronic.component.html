@@ -1,108 +1,108 @@
 @if (data$ | async; as bystronic) {
-    <sb-header
-            [title]="bystronic.data?.attributes?.headerTitle!"
-    ></sb-header>
+  <sb-header [title]="bystronic.data?.attributes?.headerTitle!"></sb-header>
 
-    <section class="wrapper bg-light">
-        <div class="container pt-14 pt-md-16 pb-13 pb-md-15">
-            <div class="row">
-                <div class="col-lg-10 offset-lg-1">
-                    <article>
-                        <h2 class="display-6 mb-4">
-                            {{ bystronic.data?.attributes?.title }}
-                        </h2>
-                        <div class="row gx-0">
-                            <div class="col-md-8 text-justify">
-                                <p class="description">{{ bystronic.data?.attributes?.description }}</p>
-                            </div>
-                            <div class="col-md-3 ms-auto">
-                                <div class="cutting-option-label">
-                                    {{
-                                        bystronic.data?.attributes?.cuttingOptionsTableBystronic
-                                            ?.label
-                                    }}
-                                </div>
-                                <table class="table table-bordered">
-                                    <tbody>
-                                    <tr>
-                                        <td>
-                                            {{
-                                                bystronic.data?.attributes
-                                                    ?.cuttingOptionsTableBystronic?.inoxLabel
-                                            }}
-                                        </td>
-                                        <td>
-                                            {{
-                                                bystronic.data?.attributes
-                                                    ?.cuttingOptionsTableBystronic?.inoxCuttingOption
-                                            }}
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            {{
-                                                bystronic.data?.attributes
-                                                    ?.cuttingOptionsTableBystronic?.aluminiumLabel
-                                            }}
-                                        </td>
-                                        <td>
-                                            {{
-                                                bystronic.data?.attributes
-                                                    ?.cuttingOptionsTableBystronic
-                                                    ?.aluminiumCuttingOption
-                                            }}
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            {{
-                                                bystronic.data?.attributes
-                                                    ?.cuttingOptionsTableBystronic?.steelLabel
-                                            }}
-                                        </td>
-                                        <td>
-                                            {{
-                                                bystronic.data?.attributes
-                                                    ?.cuttingOptionsTableBystronic?.steelCuttingOption
-                                            }}
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            {{
-                                                bystronic.data?.attributes
-                                                    ?.cuttingOptionsTableBystronic?.brassLabel
-                                            }}
-                                        </td>
-                                        <td>
-                                            {{
-                                                bystronic.data?.attributes
-                                                    ?.cuttingOptionsTableBystronic?.brassCuttingOption
-                                            }}
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            {{
-                                                bystronic.data?.attributes
-                                                    ?.cuttingOptionsTableBystronic?.copperLabel
-                                            }}
-                                        </td>
-                                        <td>
-                                            {{
-                                                bystronic.data?.attributes
-                                                    ?.cuttingOptionsTableBystronic?.copperCuttingOption
-                                            }}
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </article>
+  <section class="wrapper bg-light">
+    <div class="container pt-14 pt-md-16 pb-13 pb-md-15">
+      <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+          <article>
+            <h2 class="display-6 mb-4">
+              {{ bystronic.data?.attributes?.title }}
+            </h2>
+            <div class="row gx-0">
+              <div class="col-md-8 text-justify">
+                <p class="description">
+                  {{ bystronic.data?.attributes?.description }}
+                </p>
+              </div>
+              <div class="col-md-3 ms-auto">
+                <div class="cutting-option-label">
+                  {{
+                    bystronic.data?.attributes?.cuttingOptionsTableBystronic
+                      ?.label
+                  }}
                 </div>
+                <table class="table table-bordered">
+                  <tbody>
+                    <tr>
+                      <td>
+                        {{
+                          bystronic.data?.attributes
+                            ?.cuttingOptionsTableBystronic?.inoxLabel
+                        }}
+                      </td>
+                      <td>
+                        {{
+                          bystronic.data?.attributes
+                            ?.cuttingOptionsTableBystronic?.inoxCuttingOption
+                        }}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        {{
+                          bystronic.data?.attributes
+                            ?.cuttingOptionsTableBystronic?.aluminiumLabel
+                        }}
+                      </td>
+                      <td>
+                        {{
+                          bystronic.data?.attributes
+                            ?.cuttingOptionsTableBystronic
+                            ?.aluminiumCuttingOption
+                        }}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        {{
+                          bystronic.data?.attributes
+                            ?.cuttingOptionsTableBystronic?.steelLabel
+                        }}
+                      </td>
+                      <td>
+                        {{
+                          bystronic.data?.attributes
+                            ?.cuttingOptionsTableBystronic?.steelCuttingOption
+                        }}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        {{
+                          bystronic.data?.attributes
+                            ?.cuttingOptionsTableBystronic?.brassLabel
+                        }}
+                      </td>
+                      <td>
+                        {{
+                          bystronic.data?.attributes
+                            ?.cuttingOptionsTableBystronic?.brassCuttingOption
+                        }}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        {{
+                          bystronic.data?.attributes
+                            ?.cuttingOptionsTableBystronic?.copperLabel
+                        }}
+                      </td>
+                      <td>
+                        {{
+                          bystronic.data?.attributes
+                            ?.cuttingOptionsTableBystronic?.copperCuttingOption
+                        }}
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
+          </article>
         </div>
-    </section>
-    <sb-bystronic-images [images]="bystronic"></sb-bystronic-images>
+      </div>
+    </div>
+  </section>
+  <sb-bystronic-images [images]="bystronic"></sb-bystronic-images>
 }

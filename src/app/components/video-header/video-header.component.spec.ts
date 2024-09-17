@@ -1,23 +1,22 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { VideoHeaderComponent } from './video-header.component';
+import { VideoHeaderComponent } from "./video-header.component";
 
-describe('VideoHeaderComponent', () => {
+describe("VideoHeaderComponent", () => {
   let component: VideoHeaderComponent;
   let fixture: ComponentFixture<VideoHeaderComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [VideoHeaderComponent]
-    })
-    .compileComponents();
+      imports: [VideoHeaderComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(VideoHeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

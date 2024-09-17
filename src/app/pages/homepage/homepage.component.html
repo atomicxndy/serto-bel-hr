@@ -1,41 +1,33 @@
 @if (data$ | async; as homepageData) {
-    <div class="flex-row sb-homepage">
-        <div class="col-lg-12 col-sm-12 sb-homepage__video-section">
-            <sb-video-section [data]="homepageData"></sb-video-section>
-        </div>
-        <div
-                class="offset-lg-2 col-lg-8 offset-lg-2 col-sm-12 sb-homepage__basic-info-section"
-        >
-            <sb-achievement-section
-                    [data]="homepageData"
-            ></sb-achievement-section>
-        </div>
-        <div class="col-lg-12 col-sm-12 sb-homepage__basic-about-section">
-            <sb-about-section
-                    [data]="homepageData"
-            ></sb-about-section>
-        </div>
-        <hr />
-        <div class="col-lg-12 col-sm-12 sb-homepage__basic-services-section">
-            <sb-services-section
-                    [data]="homepageData"
-            ></sb-services-section>
-        </div>
-        <div class="col-lg-12 col-sm-12 sb-homepage__basic-faq">
-            <sb-faq-section [data]="homepageData"></sb-faq-section>
-        </div>
-        @if (!!homepageData.data.attributes.additionalInfo) {
-            <div class="col-lg-12 col-sm-12 sb-homepage__basic-cta">
-                <sb-info-section [data]="homepageData"></sb-info-section>
-            </div>
-        }
-        <div class="col-lg-12 col-sm-12 sb-homepage__basic-cta">
-            <sb-cta-section [data]="homepageData"></sb-cta-section>
-        </div>
-        <div class="col-lg-12 col-sm-12 sb-homepage__eu-fonds">
-            <sb-eu-fonds-section
-                    [data]="homepageData"
-            ></sb-eu-fonds-section>
-        </div>
+  <div class="flex-row sb-homepage">
+    <div class="col-lg-12 col-sm-12 sb-homepage__video-section">
+      <sb-video-section [data]="homepageData"></sb-video-section>
     </div>
+    <div
+      class="offset-lg-2 col-lg-8 offset-lg-2 col-sm-12 sb-homepage__basic-info-section"
+    >
+      <sb-achievement-section [data]="homepageData"></sb-achievement-section>
+    </div>
+    <div class="col-lg-12 col-sm-12 sb-homepage__basic-about-section">
+      <sb-about-section [data]="homepageData"></sb-about-section>
+    </div>
+    <hr />
+    <div class="col-lg-12 col-sm-12 sb-homepage__basic-services-section">
+      <sb-services-section [data]="homepageData"></sb-services-section>
+    </div>
+    <div class="col-lg-12 col-sm-12 sb-homepage__basic-faq">
+      <sb-faq-section [data]="homepageData"></sb-faq-section>
+    </div>
+    @if (!!homepageData.data.attributes.additionalInfo) {
+      <div class="col-lg-12 col-sm-12 sb-homepage__basic-cta">
+        <sb-info-section [data]="homepageData"></sb-info-section>
+      </div>
+    }
+    <div class="col-lg-12 col-sm-12 sb-homepage__basic-cta">
+      <sb-cta-section [data]="homepageData"></sb-cta-section>
+    </div>
+    <div class="col-lg-12 col-sm-12 sb-homepage__eu-fonds">
+      <sb-eu-fonds-section [data]="homepageData"></sb-eu-fonds-section>
+    </div>
+  </div>
 }

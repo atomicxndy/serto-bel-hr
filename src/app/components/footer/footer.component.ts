@@ -1,21 +1,18 @@
-import {Component, OnInit} from '@angular/core';
-import {Observable} from "rxjs";
-import {FooterData} from "../../shared/constants/common";
-import {HttpClient} from "@angular/common/http";
-import {EndpointBuilderService} from "../../shared/services/endpoint-builder.service";
-import {commonPagesEndpoints} from "../../shared/endpoints/endpoints";
-import {AsyncPipe} from "@angular/common";
-import {RouterLink} from "@angular/router";
+import { Component, OnInit } from "@angular/core";
+import { Observable } from "rxjs";
+import { FooterData } from "../../shared/constants/common";
+import { HttpClient } from "@angular/common/http";
+import { EndpointBuilderService } from "../../shared/services/endpoint-builder.service";
+import { commonPagesEndpoints } from "../../shared/endpoints/endpoints";
+import { AsyncPipe } from "@angular/common";
+import { RouterLink } from "@angular/router";
 
 @Component({
-  selector: 'sb-footer',
+  selector: "sb-footer",
   standalone: true,
-    imports: [
-        AsyncPipe,
-        RouterLink
-    ],
-  templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss'
+  imports: [AsyncPipe, RouterLink],
+  templateUrl: "./footer.component.html",
+  styleUrl: "./footer.component.scss",
 })
 export class FooterComponent implements OnInit {
   email = "laser@serto-bel.hr";
@@ -26,8 +23,8 @@ export class FooterComponent implements OnInit {
   facebook: string = "https://www.facebook.com/sertobelindustry";
 
   constructor(
-      private httpClient: HttpClient,
-      private endpointBuilderService: EndpointBuilderService,
+    private httpClient: HttpClient,
+    private endpointBuilderService: EndpointBuilderService,
   ) {}
 
   ngOnInit() {
@@ -36,7 +33,7 @@ export class FooterComponent implements OnInit {
 
   getFooterData(): Observable<FooterData> {
     const url = this.endpointBuilderService.buildEndpointUrl(
-        commonPagesEndpoints.footerData
+      commonPagesEndpoints.footerData,
     );
     return this.httpClient.get<FooterData>(url);
   }

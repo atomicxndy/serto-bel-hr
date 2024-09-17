@@ -1,28 +1,42 @@
 <section class="wrapper bg-gradient-navy">
-    <div class="container py-14 py-md-16">
-        <div class="row gx-lg-8 gx-xl-12 gy-10">
-            <div class="col-lg-6 col-sm-12 mb-0">
-                <h2 class="fs-15 text-uppercase text-primary mb-3">FAQ</h2>
-                <h3 class="display-5 mb-4">{{ data.data.attributes.faqSectionTitle }}</h3>
-                <p class="lead mb-6">{{ data.data.attributes.faqSectionDescription }}</p>
-                <a routerLink="/faq" class="btn btn-lg sb-btn btn-icon btn-icon-end">{{ data.data.attributes.faqSectionBtnLabel }} <i class="uil uil-arrow-up-right"></i></a>
+  <div class="container py-14 py-md-16">
+    <div class="row gx-lg-8 gx-xl-12 gy-10">
+      <div class="col-lg-6 col-sm-12 mb-0">
+        <h2 class="fs-15 text-uppercase text-primary mb-3">FAQ</h2>
+        <h3 class="display-5 mb-4">
+          {{ data.data.attributes.faqSectionTitle }}
+        </h3>
+        <p class="lead mb-6">
+          {{ data.data.attributes.faqSectionDescription }}
+        </p>
+        <a routerLink="/faq" class="btn btn-lg sb-btn btn-icon btn-icon-end"
+          >{{ data.data.attributes.faqSectionBtnLabel }}
+          <i class="uil uil-arrow-up-right"></i
+        ></a>
+      </div>
+      <div class="col-lg-6 col-sm-12 mb-2">
+        @for (
+          question of data.data.attributes.faqSectionList;
+          track question.id
+        ) {
+          <div ngbAccordion #accordion="ngbAccordion">
+            <div ngbAccordionItem="{{ question.id }}" class="accordion-item">
+              <h2 ngbAccordionHeader>
+                <button ngbAccordionButton>{{ question.faqTitle }}</button>
+              </h2>
+              <div ngbAccordionCollapse>
+                <div ngbAccordionBody>
+                  <ng-template
+                    ><p class="description">
+                      {{ question.faqDescription }}
+                    </p></ng-template
+                  >
+                </div>
+              </div>
             </div>
-            <div class="col-lg-6 col-sm-12 mb-2">
-                @for (question of data.data.attributes.faqSectionList; track  question.id;) {
-                    <div ngbAccordion #accordion="ngbAccordion">
-                        <div ngbAccordionItem="{{ question.id }}" class="accordion-item">
-                            <h2 ngbAccordionHeader>
-                                <button ngbAccordionButton>{{ question.faqTitle }}</button>
-                            </h2>
-                            <div ngbAccordionCollapse>
-                                <div ngbAccordionBody>
-                                    <ng-template><p class="description">{{ question.faqDescription}}</p></ng-template>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                }
-            </div>
-        </div>
+          </div>
+        }
+      </div>
     </div>
+  </div>
 </section>

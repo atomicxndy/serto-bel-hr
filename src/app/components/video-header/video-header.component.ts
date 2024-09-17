@@ -1,11 +1,11 @@
-import {Component, Input} from '@angular/core';
+import { Component, Input } from "@angular/core";
 
 @Component({
-  selector: 'sb-video-header',
+  selector: "sb-video-header",
   standalone: true,
   imports: [],
-  templateUrl: './video-header.component.html',
-  styleUrl: './video-header.component.scss'
+  templateUrl: "./video-header.component.html",
+  styleUrl: "./video-header.component.scss",
 })
 export class VideoHeaderComponent {
   pageData!: any;

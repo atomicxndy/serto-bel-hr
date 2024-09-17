@@ -1,12 +1,12 @@
-import {Component, Input} from '@angular/core';
-import {AboutUsPageData} from "../../../shared/constants/common";
+import { Component, Input } from "@angular/core";
+import { AboutUsPageData } from "../../../shared/constants/common";
 
 @Component({
-  selector: 'sb-content',
+  selector: "sb-content",
   standalone: true,
   imports: [],
-  templateUrl: './content.component.html',
-  styleUrl: './content.component.scss'
+  templateUrl: "./content.component.html",
+  styleUrl: "./content.component.scss",
 })
 export class ContentComponent {
   aboutUsPageData!: AboutUsPageData;
@@ -17,6 +17,6 @@ export class ContentComponent {
     this.aboutUsPageData = aboutUsPage;
 
     this.resolvedImgUrl =
-        this.aboutUsPageData.data?.attributes?.aboutUsMainImage.data.attributes.url;
+      this.aboutUsPageData.data?.attributes?.aboutUsMainImage.data.attributes.url;
   }
 }
